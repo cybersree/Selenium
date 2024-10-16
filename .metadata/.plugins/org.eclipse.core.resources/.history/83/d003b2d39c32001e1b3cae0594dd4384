@@ -1,0 +1,29 @@
+package component;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import junit.framework.Assert;
+import main.SetupFramework;
+
+public class SetupBrowser {
+
+	//public static void main(String[] args) throws InterruptedException {
+	public void createComponent() throws InterruptedException {
+		// TODO Auto-generated method stub
+		SetupFramework suf = new SetupFramework();
+		SearchContext driver=suf.setupBrowser();
+		suf.clickMenu();
+		suf.clickSubMenu();
+		WebElement ele= driver.findElement(By.xpath("//div/h1/div[text()='DSA to Development:']"));
+		Assert.assertEquals("DSA to Development:", ele.toString());
+	}
+	public void verifyComponent()
+	{
+		//WebElement ele= driver.findElement(By.xpath("//div/h1/div[text()='DSA to Development:']"));
+	}
+}

@@ -1,0 +1,5 @@
+package com.example.demoprj.controller;
+
+public class HelloController {
+
+}
